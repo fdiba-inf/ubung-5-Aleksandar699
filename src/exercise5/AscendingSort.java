@@ -16,10 +16,29 @@ public class AscendingSort {
         for (int index = 0; index < numbers.length; index++) {
             numbers[index] = input.nextInt();
         }
+        for (int i = 0 ; i < numbers.length; i++) {
+          int min_index = i;
+          for(int j = i + 1; j < numbers.length; j++){
+                if(numbers[min_index] > numbers[j]){
+                 min_index = j;
 
-        // Sort numbers in ascending order
 
+                }
+                }
+                int temp = numbers[min_index];
+            numbers[min_index] = numbers[i];
+            numbers[i] = temp;
+
+                
+            }
+    
+
+            
+        
         String numbersAsString = Arrays.toString(numbers);
         System.out.println("Sorted numbers: " + numbersAsString);
     }
 }
+  
+
+
